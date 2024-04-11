@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</head>
+
+<body>
+    <div style="margin-top: 50px;" class="ui container">
+        <h1 class="ui center aligned header">My Recipes</h1>
+
+        <form class="ui form" action="/add" method="post">
+            <div class="field">
+                <label>New Recipe</label>
+                <input type="text" name="title" placeholder="Enter recipe name..."><br>
+            </div>
+            <div class="field">
+                <label>Ingredients</label>
+                <input type="text" name="ingredients" placeholder="List ingredients..."><br>
+            </div>
+            <div class="field">
+                <label>Directions</label>
+                <input type="text" name="directions" placeholer="Enter directions..."><br>
+            </div>
+            <div class="field">
+                <label>Category</label>
+                <input type="text" name="tags" placeholder="Enter a category..."><br>
+            </div>
+            <button class="ui blue button" type="submit">Add</button>
+        </form>
+
+        <hr>
+        <form class="ui form" action="/search" method="post">
+            <div class="field">
+                <label>Search</label>
+                <input type="text" name="search"><br>
+                <button class="ui blue button" type="submit">Add</button>
+            </div>
+        </form>
+
+        {% for recipe in recipe_list %}
+        <div class="ui segment">
+            <a class="ui big header" href="/view/{{ recipe.id }}">{{ recipe.title }}</a>
+
+            <!--{% if todo.complete == False %}
+            <span class="ui gray label">Not Complete</span>
+            {% else %}
+            <span class="ui green label">Completed</span>
+            {% endif %}
+
+            <a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
+            <a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>-->
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

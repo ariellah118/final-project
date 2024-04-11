@@ -1,1 +1,7 @@
-# final-project
+# Recipe App
+# an app to store all of your recipes
+Functionalities:
+*view all of your recipes
+*add recipes
+*Easy search tool
+*search by category
