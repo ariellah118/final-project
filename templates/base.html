@@ -39,24 +39,16 @@
             <div class="field">
                 <label>Search</label>
                 <input type="text" name="search"><br>
-                <button class="ui blue button" type="submit">Add</button>
+                <button class="ui blue button" type="submit">Search</button>
             </div>
         </form>
 
         {% for recipe in recipe_list %}
         <div class="ui segment">
             <a class="ui big header" href="/view/{{ recipe.id }}">{{ recipe.title }}</a>
-
-            <!--{% if todo.complete == False %}
-            <span class="ui gray label">Not Complete</span>
-            {% else %}
-            <span class="ui green label">Completed</span>
-            {% endif %}
-
-            <a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
-            <a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>-->
         </div>
         {% endfor %}
+
     </div>
 </body>
 
