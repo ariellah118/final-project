@@ -3,5 +3,6 @@
 Functionalities:
 *view all of your recipes
 *add recipes
+*delete recipes
 *Easy search tool
 *search by category

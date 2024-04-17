@@ -11,17 +11,23 @@
 </head>
 
 <body>
-    <div style="margin-top: 50px;" class="ui container">
+    <div style="margin-top: 100px;" class="ui container">
         <a class="ui orange button" href="/">Return</a>
+        <form method="POST"
+        action="{{ url_for('delete', recipe_id=recipe.id) }}">
+    <input type="submit" value="Delete Recipe"
+        onclick="return confirm('Are you sure you want to delete this entry?')">
         <h1 class="ui center aligned header">{{ recipe.title }}</h1>
-            
+
         </form>
 
         <hr>
 
         <div class="ui segment">
             <h1 class="ui big header">{{ recipe.title }}</h1>
-            <h2>{{ recipe_viewer }}</h2>
+            <h3>{{ recipe.ingredients }}</h3>
+            <br><\<br>
+            <h3>{{ recipe.directions }}</h3>
         </div>
     </div>
 
