@@ -6,3 +6,5 @@ Functionalities:
 *delete recipes
 *Easy search tool
 *search by category
+
+# how to run
